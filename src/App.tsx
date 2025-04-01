@@ -28,6 +28,9 @@ const wormholeConfig: WormholeConnectConfig = {
     OptimismSepolia: "https://sepolia.optimism.io",
     Sepolia: "https://ethereum-sepolia-rpc.publicnode.com",
   },
+  coingecko: {
+    apiKey: process.env.REACT_APP_COINGECKO_API_KEY,
+  },
   routes: [
     ...nttRoutes({
       tokens: {
