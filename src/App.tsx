@@ -13,7 +13,7 @@ const wormholeConfig: WormholeConnectConfig = {
     "OptimismSepolia",
     "Sepolia",
   ],
-  tokens: ["WCT"],
+  tokens: ["WCTsol", "WCTbase", "WCTarb", "WCTopt", "WCTsep"],
   ui: {
     title: "Wormhole NTT UI",
     defaultInputs: {
@@ -92,11 +92,47 @@ const wormholeConfig: WormholeConnectConfig = {
     }),
   ],
   tokensConfig: {
-    WCT: {
+    WCTsol: {
       symbol: "WCT",
       tokenId: {
         chain: "Solana",
         address: "3yMEocAjGL1W1Qvq1sAwdXsMTvmANRYP6ULpuWAEQxXg",
+      },
+      icon: "https://wormhole.com/token.png",
+      decimals: 9,
+    },
+    WCTbase: {
+      symbol: "WCT",
+      tokenId: {
+        chain: "BaseSepolia",
+        address: "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      },
+      icon: "https://wormhole.com/token.png",
+      decimals: 9,
+    },
+    WCTarb: {
+      symbol: "WCT",
+      tokenId: {
+        chain: "ArbitrumSepolia",
+        address: "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      },
+      icon: "https://wormhole.com/token.png",
+      decimals: 9,
+    },
+    WCTopt: {
+      symbol: "WCT",
+      tokenId: {
+        chain: "OptimismSepolia",
+        address: "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      },
+      icon: "https://wormhole.com/token.png",
+      decimals: 9,
+    },
+    WCTsep: {
+      symbol: "WCT",
+      tokenId: {
+        chain: "Sepolia",
+        address: "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
       },
       icon: "https://wormhole.com/token.png",
       decimals: 9,
