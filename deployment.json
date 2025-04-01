@@ -1,0 +1,128 @@
+{
+  "network": "Testnet",
+  "chains": {
+    "Sepolia": {
+      "version": "1.1.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2",
+      "manager": "0x4625B04f88A9398C87B67D9deeea4A9c0fF7be7c",
+      "token": "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "0x18Db27bCDb3aC28600a6a6460051427E3cb81C66",
+          "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+        }
+      },
+      "limits": {
+        "outbound": "1000.000000000000000000",
+        "inbound": {
+          "BaseSepolia": "1000.000000000000000000",
+          "ArbitrumSepolia": "1000.000000000000000000",
+          "OptimismSepolia": "1000.000000000000000000",
+          "Solana": "1000.000000000000000000"
+        }
+      },
+      "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+    },
+    "BaseSepolia": {
+      "version": "1.1.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2",
+      "manager": "0x0DBEC6188f75bdFadCa3472cFD5C66F9FAcF6131",
+      "token": "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "0xda865D3f0207119823793300C0B941a4B4D190FA",
+          "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+        }
+      },
+      "limits": {
+        "outbound": "1000.000000000000000000",
+        "inbound": {
+          "Sepolia": "1000.000000000000000000",
+          "ArbitrumSepolia": "1000.000000000000000000",
+          "OptimismSepolia": "1000.000000000000000000",
+          "Solana": "1000.000000000000000000"
+        }
+      },
+      "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+    },
+    "ArbitrumSepolia": {
+      "version": "1.1.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2",
+      "manager": "0x96b2D025B3b35E1C3557a736357dFb3ca11D1a8C",
+      "token": "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "0x4BC0D604983C62dc37408f75f14470Bc5d3dD770",
+          "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+        }
+      },
+      "limits": {
+        "outbound": "1000.000000000000000000",
+        "inbound": {
+          "Sepolia": "1000.000000000000000000",
+          "BaseSepolia": "1000.000000000000000000",
+          "OptimismSepolia": "1000.000000000000000000",
+          "Solana": "1000.000000000000000000"
+        }
+      },
+      "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+    },
+    "OptimismSepolia": {
+      "version": "1.1.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2",
+      "manager": "0x1B033577f00c0E016386f14D286FaEDAa7f70df4",
+      "token": "0x75bb6dcA2cD6F9a0189c478bBb8F7EE2fEF07C78",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "0xF04D74d5d53EfD7c2AF01A1C93B7F0F165e1b544",
+          "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+        }
+      },
+      "limits": {
+        "outbound": "1000.000000000000000000",
+        "inbound": {
+          "Sepolia": "1000.000000000000000000",
+          "BaseSepolia": "1000.000000000000000000",
+          "ArbitrumSepolia": "1000.000000000000000000",
+          "Solana": "1000.000000000000000000"
+        }
+      },
+      "pauser": "0x928d68999B28F8813ec9ca7e7342046385b5cDF2"
+    },
+    "Solana": {
+      "version": "2.0.0",
+      "mode": "burning",
+      "paused": false,
+      "owner": "wj6FnUkUaZwZwZtEb1DJ2LgrA6DNgyBqqjjZrFE8Fum",
+      "manager": "NttZ3MkLkpWtDPuof7GAQtxzhN3dcCfZe9kAPyMDKCL",
+      "token": "3yMEocAjGL1W1Qvq1sAwdXsMTvmANRYP6ULpuWAEQxXg",
+      "transceivers": {
+        "threshold": 1,
+        "wormhole": {
+          "address": "DwE5jnjbMuihqHzZECXRDnexyMtZAYBxzsbVgPoNAVmc"
+        }
+      },
+      "limits": {
+        "outbound": "1000.000000000",
+        "inbound": {
+          "Sepolia": "1000.000000000",
+          "BaseSepolia": "1000.000000000",
+          "ArbitrumSepolia": "1000.000000000",
+          "OptimismSepolia": "1000.000000000"
+        }
+      }
+    }
+  }
+}
