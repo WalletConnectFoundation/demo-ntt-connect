@@ -22,10 +22,16 @@ const wormholeConfig: WormholeConnectConfig = {
     },
     showHamburgerMenu: false,
   },
-  // TODO: use a private RPC for mainnet
-  // rpcs: {
-  //   Solana: 'https://mainnet.helius-rpc.com/?api-key=$KEY',
-  // },
+  rpcs: {
+    Solana: "https://api.devnet.solana.com",
+    Sepolia: "https://ethereum-sepolia.publicnode.com",
+    BaseSepolia: "https://base-sepolia.publicnode.com",
+    OptimismSepolia: "https://optimism-sepolia.publicnode.com",
+    ArbitrumSepolia: "https://arbitrum-sepolia.publicnode.com",
+  },
+  coingecko: {
+    apiKey: process.env.REACT_APP_COINGECKO_API_KEY,
+  },
   routes: [
     ...nttRoutes({
       tokens: {
