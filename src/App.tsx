@@ -14,7 +14,6 @@ const wormholeConfig: WormholeConnectConfig = {
       fromChain: "Optimism",
       toChain: "Solana",
     },
-    showHamburgerMenu: false,
   },
   rpcs: {
     Optimism: "https://optimism-rpc.publicnode.com",
