@@ -21,7 +21,7 @@ const wormholeConfig: WormholeConnectConfig = {
     Ethereum: "https://ethereum-rpc.publicnode.com",
     Solana: "https://solana-rpc.publicnode.com",
   },
-  coinGeckoApiKey: process.env.REACT_APP_COINGECKO_API_KEY,
+  coinGeckoApiKey: process.env.COIN_GECKO_API_KEY,
   routes: [
     ...nttRoutes({
       tokens: {
@@ -87,7 +87,7 @@ const wormholeConfig: WormholeConnectConfig = {
         address: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
       },
       coinGeckoId: "connect-token-wct",
-      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQg",
+      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
       decimals: 18,
     },
     WCTsol: {
@@ -99,7 +99,7 @@ const wormholeConfig: WormholeConnectConfig = {
         chain: "Solana",
         address: "WCTk5xWdn5SYg56twGj32sUF3W4WFQ48ogezLBuYTBY",
       },
-      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQg",
+      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
       coinGeckoId: "connect-token-wct",
       decimals: 9,
     },
