@@ -6,19 +6,20 @@ import WormholeConnect, {
 
 const wormholeConfig: WormholeConnectConfig = {
   network: "Mainnet",
-  chains: ["Optimism", "Ethereum"],
-  tokens: ["WCTeth", "WCTopt"],
+  chains: ["Optimism", "Ethereum", "Solana"],
+  tokens: ["WCTeth", "WCTopt", "WCTsol"],
   ui: {
     title: "Wormhole NTT UI",
     defaultInputs: {
       fromChain: "Optimism",
-      toChain: "Ethereum",
+      toChain: "Solana",
     },
     showHamburgerMenu: false,
   },
   rpcs: {
     Optimism: "https://optimism-rpc.publicnode.com",
     Ethereum: "https://ethereum-rpc.publicnode.com",
+    Solana: "https://solana-rpc.publicnode.com",
   },
   coinGeckoApiKey: process.env.REACT_APP_COINGECKO_API_KEY,
   routes: [
@@ -47,6 +48,17 @@ const wormholeConfig: WormholeConnectConfig = {
               },
             ],
           },
+          {
+            chain: "Solana",
+            manager: "nttLq3ZsKu9uAFWuBGksdZTPAjkMRyPkxp61CJPsntA",
+            token: "WCTk5xWdn5SYg56twGj32sUF3W4WFQ48ogezLBuYTBY",
+            transceiver: [
+              {
+                address: "5FksLs44iw5TPZ1yngyxKxZyvBXeUCgQM7VQfiRZVK45",
+                type: "wormhole",
+              },
+            ],
+          },
         ],
       },
     }),
@@ -61,8 +73,8 @@ const wormholeConfig: WormholeConnectConfig = {
         chain: "Ethereum",
         address: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
       },
-      coinGeckoId: "wormhole",
-      icon: "https://wormhole.com/token.png",
+      coinGeckoId: "connect-token-wct",
+      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
       decimals: 18,
     },
     WCTopt: {
@@ -74,9 +86,22 @@ const wormholeConfig: WormholeConnectConfig = {
         chain: "Optimism",
         address: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
       },
-      coinGeckoId: "wormhole",
-      icon: "https://wormhole.com/token.png",
+      coinGeckoId: "connect-token-wct",
+      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQg",
       decimals: 18,
+    },
+    WCTsol: {
+      key: "WCTsol",
+      symbol: "WCT",
+      nativeChain: "Solana",
+      displayName: "WCT",
+      tokenId: {
+        chain: "Solana",
+        address: "WCTk5xWdn5SYg56twGj32sUF3W4WFQ48ogezLBuYTBY",
+      },
+      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQg",
+      coinGeckoId: "connect-token-wct",
+      decimals: 9,
     },
   },
 };
