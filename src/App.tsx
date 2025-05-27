@@ -14,14 +14,14 @@ const wormholeConfig: WormholeConnectConfig = {
       fromChain: "Optimism",
       toChain: "Solana",
     },
-    walletConnectProjectId: process.env.WALLET_CONNECT_PROJECT_ID,
+    walletConnectProjectId: import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID,
   },
   rpcs: {
     Optimism: "https://optimism-rpc.publicnode.com",
     Ethereum: "https://ethereum-rpc.publicnode.com",
     Solana: "https://solana-rpc.publicnode.com",
   },
-  coinGeckoApiKey: process.env.COIN_GECKO_API_KEY,
+  coinGeckoApiKey: import.meta.env.VITE_COIN_GECKO_API_KEY,
   routes: [
     ...nttRoutes({
       tokens: {
