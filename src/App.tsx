@@ -1,10 +1,10 @@
 import WormholeConnect, {
   WormholeConnectTheme,
-  WormholeConnectConfig,
-  nttRoutes,
+  config,
 } from '@wormhole-foundation/wormhole-connect';
+import { nttRoutes } from '@wormhole-foundation/wormhole-connect/ntt';
 
-const wormholeConfig: WormholeConnectConfig = {
+const wormholeConfig: config.WormholeConnectConfig = {
   network: "Mainnet",
   chains: ["Optimism", "Ethereum", "Solana"],
   tokens: ["WCTeth", "WCTopt", "WCTsol"],
@@ -21,7 +21,9 @@ const wormholeConfig: WormholeConnectConfig = {
     Ethereum: "https://ethereum-rpc.publicnode.com",
     Solana: "https://solana-rpc.publicnode.com",
   },
-  coinGeckoApiKey: import.meta.env.VITE_COIN_GECKO_API_KEY,
+  coingecko: {
+    apiKey: import.meta.env.VITE_COIN_GECKO_API_KEY,
+  },
   routes: [
     ...nttRoutes({
       tokens: {
@@ -66,38 +68,32 @@ const wormholeConfig: WormholeConnectConfig = {
   tokensConfig: {
     WCTeth: {
       symbol: "WCT",
-      nativeChain: "Ethereum",
-      displayName: "WCT",
+      name: "WCT",
       tokenId: {
         chain: "Ethereum",
         address: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
       },
-      coinGeckoId: "connect-token-wct",
       icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
       decimals: 18,
     },
     WCTopt: {
       symbol: "WCT",
-      nativeChain: "Optimism",
-      displayName: "WCT",
+      name: "WCT",
       tokenId: {
         chain: "Optimism",
         address: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
       },
-      coinGeckoId: "connect-token-wct",
       icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
       decimals: 18,
     },
     WCTsol: {
       symbol: "WCT",
-      nativeChain: "Solana",
-      displayName: "WCT",
+      name: "WCT",
       tokenId: {
         chain: "Solana",
         address: "WCTk5xWdn5SYg56twGj32sUF3W4WFQ48ogezLBuYTBY",
       },
       icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
-      coinGeckoId: "connect-token-wct",
       decimals: 9,
     },
   },
