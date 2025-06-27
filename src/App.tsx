@@ -1,8 +1,8 @@
 import WormholeConnect, {
+  WormholeConnectTheme,
   WormholeConnectConfig,
   nttRoutes,
-  WormholeConnectTheme,
-} from "@wormhole-foundation/wormhole-connect";
+} from '@wormhole-foundation/wormhole-connect';
 
 const wormholeConfig: WormholeConnectConfig = {
   network: "Mainnet",
@@ -65,7 +65,6 @@ const wormholeConfig: WormholeConnectConfig = {
   ],
   tokensConfig: {
     WCTeth: {
-      key: "WCTeth",
       symbol: "WCT",
       nativeChain: "Ethereum",
       displayName: "WCT",
@@ -78,7 +77,6 @@ const wormholeConfig: WormholeConnectConfig = {
       decimals: 18,
     },
     WCTopt: {
-      key: "WCTopt",
       symbol: "WCT",
       nativeChain: "Optimism",
       displayName: "WCT",
@@ -91,7 +89,6 @@ const wormholeConfig: WormholeConnectConfig = {
       decimals: 18,
     },
     WCTsol: {
-      key: "WCTsol",
       symbol: "WCT",
       nativeChain: "Solana",
       displayName: "WCT",

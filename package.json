@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@walletconnect/modal": "^2.7.0",
-    "@wormhole-foundation/wormhole-connect": "^1.1.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.1.2",
+    "@mui/material": "^7.1.2",
+    "@mui/styled-engine": "^7.1.1",
+    "@mui/system": "^7.1.1",
+    "@wormhole-foundation/wormhole-connect": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
