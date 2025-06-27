@@ -1,3 +1,5 @@
+'use client';
+
 import WormholeConnect, {
   WormholeConnectTheme,
   config,
@@ -14,7 +16,7 @@ const wormholeConfig: config.WormholeConnectConfig = {
       fromChain: "Optimism",
       toChain: "Solana",
     },
-    walletConnectProjectId: import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID,
+    walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
   rpcs: {
     Optimism: "https://optimism-rpc.publicnode.com",
@@ -22,7 +24,7 @@ const wormholeConfig: config.WormholeConnectConfig = {
     Solana: "https://solana-rpc.publicnode.com",
   },
   coingecko: {
-    apiKey: import.meta.env.VITE_COIN_GECKO_API_KEY,
+    apiKey: process.env.NEXT_PUBLIC_COIN_GECKO_API_KEY,
   },
   routes: [
     ...nttRoutes({
@@ -99,7 +101,7 @@ const wormholeConfig: config.WormholeConnectConfig = {
   },
 };
 
-function App() {
+export default function Home() {
   const theme: WormholeConnectTheme = {
     mode: "dark",
     primary: "#78c4b6",
@@ -111,4 +113,3 @@ function App() {
     </div>
   );
 }
-export default App;

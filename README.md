@@ -1,6 +1,6 @@
 # Wormhole NTT Connect demo
 
-This project sets up a Vite-React TypeScript application and integrates it with the Wormhole Connect SDK.
+This project sets up a Next.js React TypeScript application and integrates it with the Wormhole Connect SDK.
 
 ## Prerequisites
 
@@ -20,9 +20,21 @@ git clone https://github.com/wormhole-foundation/demo-ntt-connect.git
 cd demo-ntt-connect
 ```
 
-### 2. Download Dependencies
+### 2. Setup Environment Variables
 
-Make sure to install all required dependencies using `npm` or `yarn`:
+Copy the example environment file and add your API keys:
+
+```bash
+cp .env.example .env.local
+```
+
+Then edit `.env.local` with your actual API keys:
+- `NEXT_PUBLIC_COIN_GECKO_API_KEY` - Get from [CoinGecko](https://www.coingecko.com/en/api)
+- `NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID` - Get from [WalletConnect Cloud](https://cloud.walletconnect.com/)
+
+### 3. Download Dependencies
+
+Install all required dependencies using npm or yarn:
 
 ```bash
 # Using npm
@@ -32,13 +44,13 @@ npm install
 yarn
 ```
 
-### 3. Adjust WormholeConnectConfig
+### 4. Adjust WormholeConnectConfig
 
-Adjust the `WormholeConnectConfig` in `App.tsx` based on the `deployment.json` file from your NTT deployment. This configuration is essential to ensure proper integration with your deployment environment.
+Adjust the `WormholeConnectConfig` in `app/page.tsx` based on the `deployment.json` file from your NTT deployment. This configuration is essential to ensure proper integration with your deployment environment.
 
-### 4. Run the App
+### 5. Run the App
 
-Finally, run your application:
+Start the development server:
 
 ```bash
 yarn dev
@@ -50,5 +62,5 @@ or, if using npm:
 npm run dev
 ```
 
-### 5. Important Notes
+### 6. Important Notes
    - Use a private RPC for mainnet, to prevent timeouts
