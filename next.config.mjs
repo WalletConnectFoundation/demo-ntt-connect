@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   productionBrowserSourceMaps: false,
   experimental: {
-    esmExternals: 'loose',
+    esmExternals: false,
   },
   webpack: (config) => {
     config.resolve.fallback = {
