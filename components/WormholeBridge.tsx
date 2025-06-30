@@ -2,14 +2,14 @@
 
 import WormholeConnect, {
   WormholeConnectTheme,
-  config,
+  type config,
 } from '@wormhole-foundation/wormhole-connect';
 import { nttRoutes } from '@wormhole-foundation/wormhole-connect/ntt';
 
 const wormholeConfig: config.WormholeConnectConfig = {
   network: "Mainnet",
   chains: ["Optimism", "Ethereum", "Solana"],
-  tokens: ["WCTeth", "WCTopt", "WCTsol"],
+  tokens: ["WCT"],
   ui: {
     title: "Wormhole NTT UI",
     defaultInputs: {
