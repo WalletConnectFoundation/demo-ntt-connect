@@ -19,10 +19,10 @@ const wormholeConfig: config.WormholeConnectConfig = {
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
   rpcs: {
-    Optimism: "https://optimism-rpc.publicnode.com",
-    Ethereum: "https://ethereum-rpc.publicnode.com",
-    Solana: "https://solana-rpc.publicnode.com",
-    Base: "https://base-rpc.publicnode.com",
+    Ethereum: process.env.NEXT_PUBLIC_ETHEREUM_RPC || "https://ethereum-rpc.publicnode.com",
+    Optimism: process.env.NEXT_PUBLIC_OPTIMISM_RPC || "https://optimism-rpc.publicnode.com",
+    Base: process.env.NEXT_PUBLIC_BASE_RPC || "https://base-rpc.publicnode.com",
+    Solana: process.env.NEXT_PUBLIC_SOLANA_RPC || "https://solana-rpc.publicnode.com",
   },
   coingecko: {
     apiKey: process.env.NEXT_PUBLIC_COIN_GECKO_API_KEY,
