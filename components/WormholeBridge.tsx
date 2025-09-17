@@ -8,7 +8,7 @@ import { nttRoutes } from '@wormhole-foundation/wormhole-connect/ntt';
 
 const wormholeConfig: config.WormholeConnectConfig = {
   network: "Mainnet",
-  chains: ["Optimism", "Ethereum", "Solana"],
+  chains: ["Optimism", "Ethereum", "Solana", "Base"],
   tokens: ["WCT"],
   ui: {
     title: "Wormhole NTT UI",
@@ -19,9 +19,10 @@ const wormholeConfig: config.WormholeConnectConfig = {
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
   rpcs: {
-    Optimism: "https://optimism-rpc.publicnode.com",
-    Ethereum: "https://ethereum-rpc.publicnode.com",
-    Solana: "https://solana-rpc.publicnode.com",
+    Ethereum: process.env.NEXT_PUBLIC_ETHEREUM_RPC || "https://ethereum-rpc.publicnode.com",
+    Optimism: process.env.NEXT_PUBLIC_OPTIMISM_RPC || "https://optimism-rpc.publicnode.com",
+    Base: process.env.NEXT_PUBLIC_BASE_RPC || "https://base-rpc.publicnode.com",
+    Solana: process.env.NEXT_PUBLIC_SOLANA_RPC || "https://solana-rpc.publicnode.com",
   },
   coingecko: {
     apiKey: process.env.NEXT_PUBLIC_COIN_GECKO_API_KEY,
@@ -63,6 +64,17 @@ const wormholeConfig: config.WormholeConnectConfig = {
               },
             ],
           },
+          {
+            chain: "Base",
+            manager: "0x164Be303480f542336bE0bBe0432A13b85e6FD1b",
+            token: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
+            transceiver: [
+              {
+                address: "0x3cB1d3A449a868dd8BF8F8928408836543Fe2A68",
+                type: "wormhole",
+              },
+            ],
+          },
         ],
       },
     }),
@@ -97,6 +109,16 @@ const wormholeConfig: config.WormholeConnectConfig = {
       },
       icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
       decimals: 9,
+    },
+    WCTbase: {
+      symbol: "WCT",
+      name: "WCT",
+      tokenId: {
+        chain: "Base",
+        address: "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
+      },
+      icon: "https://arweave.net/zBO8_CRB3aQrPmMA_F6GP4QnfRVbHYJLyKPtnZPTCwQ",
+      decimals: 18,
     },
   },
 };
